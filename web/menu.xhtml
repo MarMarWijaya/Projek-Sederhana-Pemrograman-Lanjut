@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Daftar Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:graphicImage value="images/headerfooter/Header.png" width="1350px"/>
+
+        <hr></hr>
+        <a href="beranda.xhtml" style="margin-left: 650px; font-size: 25px">Beranda</a>
+        <a href="menu.xhtml" style="margin-left: 25px; font-size: 25px; color: black">Menu</a>
+        <a href="promo.xhtml" style="margin-left: 25px; font-size: 25px">Promo</a>
+        <a href="tentangkami.xhtml" style="margin-left: 25px; font-size: 25px">Tentang Kami</a>
+        <a href="akun.xhtml" style="margin-left: 25px; font-size: 25px">Akun Saya</a>
+        <a href="index.xhtml" style="margin-left: 25px; font-size: 25px">Keluar</a>
+
+        <h2>Enter Order</h2>
+
+        <h:form>
+
+            <h2>Makanan</h2>
+            <table width="100%" border="0">
+                <tr>
+                    <th>Gambar</th>
+                    <th>Nama</th>
+                    <th>Harga Satuan</th>
+                    <th>Jumlah</th>
+                    <th>Catatan</th>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/nasgor.png" width="100px" height="100px"/></center></td>
+                    <td>Nasi Goreng</td>
+                    <td    rowspan="2"><center>Rp 12.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Spesial khas Salatiga, menggunakan ikan teri lokal dan telur untuk menambah cita rasa</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/migor.png" width="100px" height="100px"/></center></td>
+                    <td>Mie Goreng</td>
+                    <td    rowspan="2"><center>Rp 13.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty1}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note1}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction1}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Spesial khas Salatiga, dengan ayam suwir, ditambah dengan bumbu rempah, dan telur</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/mibus.png" width="100px" height="100px"/></center></td>
+                    <td>Mie Rebus</td>
+                    <td    rowspan="2"><center>Rp 13.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty2}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note2}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction2}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Mie rebus dengan kuah kaldu ayam berempah, ditambah dengan ayam suwir, telur dan sayuran</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/nasiayam.png" width="100px" height="100px"/></center></td>
+                    <td>Ayam Goreng</td>
+                    <td    rowspan="2"><center>Rp 18.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty3}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note3}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction3}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Paket dengan nasi, lalapan, tahu tempe goreng dan sambal, ayam dibumbui dengan lengkuas dan jahe</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/burger.png" width="100px" height="100px"/></center></td>
+                    <td>Beef Burger</td>
+                    <td    rowspan="2"><center>Rp 21.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty4}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note4}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction4}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Dibuat dengan daging pilihan dan keju lumer untuk menambah rasa gurih</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/spaghetti.png" width="100px" height="100px"/></center></td>
+                    <td>Spaghetti</td>
+                    <td    rowspan="2"><center>Rp 20.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty5}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note5}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction5}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Spaghetti bolognaise dengan cincangan daging dan bakso, saus dibuat menggunakan tomat asli dan segar</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/mendoan.png" width="100px" height="100px"/></center></td>
+                    <td>Mendoan</td>
+                    <td    rowspan="2"><center>Rp 7.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty6}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note6}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction6}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Tempe mendoan khas Jawa Tengah, dengan balutan tepung renyah dan gurih</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/singkong.png" width="100px" height="100px"/></center></td>
+                    <td>Singkong Crispy</td>
+                    <td    rowspan="2"><center>Rp 7.500</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty7}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note7}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction7}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Singkong presto crispy khas D-9 Salatiga</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/kentang.png" width="100px" height="100px"/></center></td>
+                    <td>French Fries</td>
+                    <td    rowspan="2"><center>Rp 8.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty8}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note8}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction8}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Tersedia rasa: salsa, barbeque, cheese dan original</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/ropang.png" width="100px" height="100px"/></center></td>
+                    <td>Ropang</td>
+                    <td    rowspan="2"><center>Rp 8.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty9}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note9}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction9}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Tersedia rasa: coklat, strawberry, keju dan srikaya</td>
+                </tr>
+
+
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/teh.png" width="100px" height="100px"/></center></td>
+                    <td>Teh</td>
+                    <td    rowspan="2"><center>Rp 5.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty10}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note10}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction10}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Tersedia: panas dan dingin</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/milks.png" width="100px" height="100px"/></center></td>
+                    <td>Milkshake</td>
+                    <td    rowspan="2"><center>Rp 10.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty11}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note11}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction11}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Tersedia rasa: coklat, vanilla, strawberry, taro, dan green tea</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/mojito.png" width="100px" height="100px"/></center></td>
+                    <td>Mojito</td>
+                    <td    rowspan="2"><center>Rp 12.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty12}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note12}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction12}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Campuran soda dengan daun mint, jeruk nipis dan sirup</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/lemon.png" width="100px" height="100px"/></center></td>
+                    <td>Lemon Squash</td>
+                    <td    rowspan="2"><center>Rp 15.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty13}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note13}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction13}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Jus Lemon dengan campuran sirup spesial dan mint</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/cap.png" width="100px" height="100px"/></center></td>
+                    <td>Cappuccino</td>
+                    <td    rowspan="2"><center>Rp 11.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty14}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note14}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction14}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Kopi khas Italia dengan campuran krimer dan susu</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/root.png" width="100px" height="100px"/></center></td>
+                    <td>Root Beer Float</td>
+                    <td    rowspan="2"><center>Rp 15.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty15}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note15}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction15}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Minuman dengan sarsaparilla dan ditambah dengan es krim vanilla atau coklat diatasnya</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/jus.png" width="100px" height="100px"/></center></td>
+                    <td>Jus Buah</td>
+                    <td    rowspan="2"><center>Rp 12.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty16}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note16}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction16}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Tersedia: Alpukat, Mangga, Apel, Wortel, Tomat, Sirsak dan Jambu</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/jahe.png" width="100px" height="100px"/></center></td>
+                    <td>Jahe Rempah</td>
+                    <td    rowspan="2"><center>Rp 7.500</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty17}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note17}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction17}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Minuman jahe yang ditambahkan rempah dan sereh</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/boba.png" width="100px" height="100px"/></center></td>
+                    <td>Boba Tea</td>
+                    <td    rowspan="2"><center>Rp 12.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty18}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note18}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction18}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px">Teh khas Taiwan dengan susu dan boba (Sagu) yang kenyal dan manis</td>
+                </tr>
+
+                <tr>
+                    <td    rowspan="2"><center><h:graphicImage value="images/aq.png" width="100px" height="100px"/></center></td>
+                    <td>Aqua</td>
+                    <td    rowspan="2"><center>Rp 3.000</center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.qty19}" /></center></td>
+                    <td    rowspan="2"><center><h:inputText size="5" value="#{order.note19}" /></center></td>
+                    <td    rowspan="2"><center><h:commandButton value="Pilih" action="#{order.addAction19}" /></center></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px"></td>
+                </tr>
+
+            </table>
+
+        </h:form>
+
+        <h:form>
+            <center>
+                <h:dataTable value="#{order.a}" var="o"
+                             styleClass="order-table"
+                             headerClass="order-table-header"
+                             rowClasses="order-table-odd-row,order-table-even-row"
+                             >
+                    <h:column>
+                        <h:commandLink style="font-size: 30px" value="Beli (Bebas Klik yang Mana)"
+                                       action="#{o.konfirmasi()}" />
+                    </h:column>
+
+                </h:dataTable></center>
+        </h:form>
+
+        <br></br>
+        <h:graphicImage value="images/headerfooter/Footer.png" width="1350px"/>
+    </body>
+</html>
